@@ -1,0 +1,85 @@
+section.pricing {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+.card-header img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: auto;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  margin: 1rem;
+  transform: all 0.2s ease-in;
+}
+
+.card-wrapper:hover .card-header h2 {
+  color: #ed8900;
+  transform: scale(1.1);
+  letter-spacing: 2px;
+}
+.card-header {
+  text-align: center;
+  margin: 1rem;
+}
+.card-header h2 {
+  margin-top: 10px;
+  font-family: "raleway";
+}
+
+.card-detail {
+  width: 100%;
+}
+.card-detail p {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #d5d5d5;
+}
+.card-detail p:hover {
+  background-color: #d5d5d5;
+}
+.card-price {
+  display: flex;
+  margin: 1rem;
+  align-items: flex-start;
+}
+.card-price p {
+  font-size: 3rem;
+  font-weight: 800;
+}
+.card-price p sup,
+.card-price p sub {
+  font-size: 1rem;
+}
+.card-button {
+  padding: 0.6rem 3rem;
+  border: 2px solid #ed8900;
+  background-color: #ed8900;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 30px;
+  transition: all 50ms ease-in;
+}
+.card-button:hover {
+  border: 2px solid #ed8900;
+  color: #ed8900;
+  background: transparent;
+}
+
+@media (max-width: 770px) {
+  .card-wrapper {
+    width: 250px;
+    margin: 15px 0px;
+  }
+}
