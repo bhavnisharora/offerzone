@@ -13,6 +13,7 @@ import { Routes, Route } from "react-router-dom";
 import './App.css'
 import ModalParent from "./components/modal/ModalParent";
 import ScrollButton from "./components/ScrollButton";
+import AboutModal from "./components/modal/aboutmodal/AboutModal";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -28,10 +29,10 @@ function App() {
     <>
       {/* <Navbar /> */}
       <ModalParent />
-      <ScrollButton></ScrollButton>
+      <ScrollButton />
       <Routes>
         <Route path="/" Component={Home} exact />
-        <Route path="/about" Component={About} exact />
+        <Route path="/about" Component={AboutModal} exact />
         <Route path="/contact" Component={Contact} exact />
         <Route path="/login" Component={Login} exact />
         <Route path="/register" Component={Register} exact />

@@ -53,7 +53,7 @@ const DropDownLinks = [
   },
 ];
 
-const Navbar = ({ handleLocationClick }) => {
+const Navbar = ({ handleLocationClick, handleAboutClick }) => {
 
   return (
     <>
@@ -89,12 +89,28 @@ const Navbar = ({ handleLocationClick }) => {
             <ul className="sm:flex hidden items-center gap-4">
               {Menu.map((data) => (
                 <li key={data.id}>
-                  <a
+                  {data.name == "About" ? (
+                    <a
+                      href={data.link}
+                      className="inline-block px-4 hover:text-primary duration-200"
+                      onClick={handleAboutClick}
+                    >
+                      {data.name}
+                    </a>
+                  ) : (
+                    <a
+                      href={data.link}
+                      className="inline-block px-4 hover:text-primary duration-200"
+                    >
+                      {data.name}
+                    </a>
+                  )}
+                  {/* <a
                     href={data.link}
                     className="inline-block px-4 hover:text-primary duration-200"
                   >
                     {data.name}
-                  </a>
+                  </a> */}
                 </li>
               ))}
               {/* Simple Dropdown and links  */}
@@ -155,8 +171,7 @@ const Navbar = ({ handleLocationClick }) => {
               <FaShoppingCart className="text-xl text-white drop-shadow-sm cursor-pointer" />
             </button>
 
-            {/* Darkmode Button  */}
-            <div></div>
+
           </div>
         </div>
       </div>

@@ -43,23 +43,9 @@
   padding: 2rem;
 }
 
-.box h1 {
-  font-weight: 400;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin: 2rem 0 0.1rem 0;
-  font-size: 27px;
-}
 
-.box h2 {
-  margin-top: 2rem;
-}
 
-.box p {
-  font-size: 19px;
-  letter-spacing: 5px;
-  margin-bottom: 2rem;
-}
+
 
 .city_input {
   border: 1px solid gray;
@@ -213,15 +199,6 @@
   .box {
     padding: 1rem;
   }
-  .box h1 {
-    margin-top: 3rem;
-    font-size: 26px;
-  }
-
-  .box p {
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
   .top_cities {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -235,4 +212,4 @@
     font-size: 12px;
     font-family: "Times New Roman", Times, serif;
   }
-} 
+}
