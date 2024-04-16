@@ -1,10 +1,10 @@
 import React from "react";
 
-import Img1 from "../../assets/women.png";
-import Img2 from "../../assets/women2.jpg";
-import Img3 from "../../assets/women3.jpg";
-import Img4 from "../../assets/women4.jpg";
-import Img5 from "../../assets/women.png";
+import Img1 from "../../assets/images/women.png";
+import Img2 from "../../assets/images/women2.jpg";
+import Img3 from "../../assets/images/women3.jpg";
+import Img4 from "../../assets/images/women4.jpg";
+import Img5 from "../../assets/images/women.png";
 
 import { TiStarFullOutline } from "react-icons/ti";
 

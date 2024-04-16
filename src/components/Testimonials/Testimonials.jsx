@@ -36,8 +36,6 @@ const TestimonialData = [
 
 const Testimonials = () => {
   var settings = {
-    dots: true,
-    arrows: false,
     infinite: true,
     speed: 1000,
     slidesToScroll: 1,

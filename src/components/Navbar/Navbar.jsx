@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/images/logo.png";
 import { IoMdSearch } from "react-icons/io";
 import { FaShoppingCart, FaCaretDown } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
 import { MdArrowDropDown } from "react-icons/md";
-import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -54,73 +53,12 @@ const DropDownLinks = [
   },
 ];
 
-const Navbar = () => {
-  const [isChange, setIsChange] = useState();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const Navbar = ({ handleLocationClick }) => {
 
-  const handleLocationClick = (e) => {
-    e.preventDefault();
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    document.querySelector(".modal").style.animation =
-      "slideUp 0.5s ease forwards";
-    setTimeout(() => {
-      setIsModalOpen(false);
-    }, 500);
-  };
   return (
     <>
-      {/* modal toggle */}
-      {isModalOpen && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <button onClick={handleCloseModal} className="esc_btn">
-              <IoClose className="close" />
-              <span>Esc</span>
-            </button>
-            <div className="box">
-              <h1>
-                Tell Us Your <span>Home Town</span>
-              </h1>
-              <p>Explore the offers nearby you</p>
-              <form action="/jalandhar" onSubmit="" className="city_input">
-                <MdLocationPin className="text-2xl" />
-                <input
-                  type="text"
-                  value={isChange}
-                  onChange={(e) => setIsChange(e.target.value)}
-                  placeholder="Enter your city"
-                />
-                <button type="button" className="bg-primary leading-4">
-                  Use my location
-                </button>
-              </form>
-              <h2>Top Cities</h2>
-              <div className="top_cities">
-                <Link to="/">Jalandhar</Link>
-                <Link to="/">Hyderabad</Link>
-                <Link to="/">New Dehli</Link>
-                <Link to="/">Mumbai</Link>
-                <Link to="/">Chandigarh</Link>
-                <Link to="/">Chennai</Link>
-                <Link to="/">Pune</Link>
-                <Link to="/">Maharashtra</Link>
-                <Link to="/">Gujrat</Link>
-                <Link to="/">Ahmedabad</Link>
-                <Link to="/">Goa</Link>
-              </div>
-              <div className="app_logo">
-                <img src="" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
       <div className="shadow-md bg-white dark:bg-grey-900 dark:text-white duration-200 relative ">
         {/* upper Navbar  */}
-
         <div
           className="flex justify-between my-2 items-center"
           data-aos="zoom-out"
@@ -135,7 +73,7 @@ const Navbar = () => {
                   </span>
                   <label for="cars">Select a location</label>
                 </p>
-                <button
+                <div
                   className="ml-3 flex city-name justify-center items-center gap-1 cursor-pointer"
                   onClick={handleLocationClick}
                 >
@@ -143,7 +81,7 @@ const Navbar = () => {
                   <span className="text-2xl">
                     <MdArrowDropDown />
                   </span>
-                </button>
+                </div>
               </div>
             </form>
           </div>

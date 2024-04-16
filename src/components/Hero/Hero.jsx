@@ -5,7 +5,7 @@ import Image3 from "../../assets/vector/3.png";
 import Slider from "react-slick"
 
 const ImageList = [
-  {
+  { 
     id: 1,
     img: Image1,
     title: "upto 50% off on all Men's Wear",

@@ -1,5 +1,5 @@
 import React from "react";
-import Image1 from "../../assets/women2.jpg";
+import Image1 from "../../assets/images/women2.jpg";
 
 import { PiLockKeyDuotone } from "react-icons/pi";
 import { CiDeliveryTruck } from "react-icons/ci";

@@ -1,8 +1,8 @@
 import React from "react";
 
-import Image1 from "../../assets/shirt.png";
-import Image2 from "../../assets/shirt2.png";
-import Image3 from "../../assets/shirt3.png";
+import Image1 from "../../assets/images/shirt.png";
+import Image2 from "../../assets/images/shirt2.png";
+import Image3 from "../../assets/images/shirt3.png";
 
 import { TiStarFullOutline } from "react-icons/ti";
 
